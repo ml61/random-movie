@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.select-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: rgba(56, 197, 56, 0.767);
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+select {
+  background-color: gainsboro;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+select:hover {
+  background-color: rgb(151, 148, 148);
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.btn-main {
+  font-size: 1rem;
+  background-color: gainsboro;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-main:hover {
+  background-color: rgb(178, 245, 22);
+}
+
+.movie-section {
+  display: flex;
+  margin: 0 2rem;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.description-container div {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.description-container span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(7, 7, 7, 0.76);
+}
+
+.poster {
+  height: 500px;
+}
+
+.title {
+  text-align: center;
+}
+.title-header {
+  font-size: 2rem;
+}
+
+.trailer {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+}
+.trailer h2 {
+  margin-bottom: 1rem;
+}
+.trailer iframe {
+  width: 60rem;
+  height: 40rem;
+  margin-bottom: 2rem;
+}
+
+.error {
+  text-align: center;
+}

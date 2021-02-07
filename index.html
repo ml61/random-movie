@@ -7,22 +7,80 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label for="genres">Choose a genre:</label>
-    <select id="genres" name="genres">
-      <option value="volvo">Horror</option>
-      <option value="saab">Comedy</option>
-      <option value="fiat">Animation</option>
-      <option value="audi">Drama</option>
-    </select>
+    <div class="select-container">
+      <div class="genres-box">
+        <label for="genres">Choose a genre:</label>
+        <select id="genres" name="genres">
+          <!-- <option value="volvo">Horror</option>
+          <option value="saab">Comedy</option>
+          <option value="fiat">Animation</option>
+          <option value="audi">Drama</option> -->
+        </select>
+      </div>
 
-    <label for="year">Year, not less, than:</label>
-    <select id="year" name="year"></select>
+      <div class="year-box">
+        <label for="year">Year:</label>
+        <select id="year" name="year"></select>
+      </div>
 
-    <label for="rating">Rating, not less, than:</label>
-    <select id="rating" name="rating"></select>
+      <div class="rating-box">
+        <label for="rating">Rating, not less, than:</label>
+        <select id="rating" name="rating"></select>
+      </div>
 
-    <button class="btn-main">Generate Random Movie</button>
+      <div class="votes-box">
+        <label for="votes">Minimum votes quantity:</label>
+        <select id="votes" name="rating"></select>
+      </div>
 
+      <div class="try-again-box">
+        <button class="btn-main">Generate Random Movie</button>
+      </div>
+    </div>
+
+    <div class="movie-main-container">
+      <!-- <div class="movie-section">
+        <div class="img-box">
+          <img
+            src="https://image.tmdb.org/t/p/w500/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg"
+            alt=""
+            class="poster"
+            data-id=""
+          />
+        </div>
+        <div class="description-container">
+          <div class="title">
+            <h2 class="title-header">Soul</h2>
+          </div>
+          <div class="rating">Rating: <span>8.5</span></div>
+          <div class="votes-quantity">Votes: <span>4260</span></div>
+          <div class="genres">
+            Genres: <span>Animation, Comedy, Action</span>
+          </div>
+          <div class="director">Director: <span>Robert Zemekis</span></div>
+          <div class="actors">
+            Actors:<span>Bob Markey, Maxon Lysenko, Yana Levus</span>
+          </div>
+          <div class="duration">Duration: <span>119 min</span></div>
+          <div class="overview">
+            Overview:
+            <span
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Laboriosam nesciunt doloribus ipsam aliquam hic autem neque sunt
+              architecto! Est doloremque temporibus adipisci ea pariatur
+              veritatis nam quisquam nobis perspiciatis accusamus!</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="trailer">
+        <h2>Trailer</h2>
+        <iframe
+          src="https://www.youtube.com/embed/TC3W7Z6PxwU"
+          frameborder="0"
+        ></iframe>
+      </div> -->
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
