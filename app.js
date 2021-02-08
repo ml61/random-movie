@@ -72,7 +72,7 @@ function init() {
 }
 
 function makeURL(query) {
-  let URL = `https://api.themoviedb.org/3/discover/movie?api_key=4e1ae7b7696237121285525a25ba8e49&language=en-US&vote_average.gte=${query.rating}&vote_count.gte=${query.minimumVotesQuantity}&with_genres=${query.genre}&primary_release_year=${query.year}`;
+  let URL = `https://api.themoviedb.org/3/discover/movie?api_key=4e1ae7b7696237121285525a25ba8e49&language=en-US&vote_average.gte=${query.rating}&vote_count.gte=${query.minimumVotesQuantity}&with_genres=${query.genre}&primary_release_date.gte=${query.year}`;
   return URL;
 }
 
@@ -84,7 +84,7 @@ function makeURLDetailsCredits(path) {
 generateMovieBtnElement.addEventListener("click", function (e) {
   let query = {
     genre: genresSelectElement.value,
-    year: yearSelectElement.value,
+    year: yearSelectElement.value + `-01-01`,
     rating: ratingSelectElement.value,
     minimumVotesQuantity: votesSelectElement.value,
   };
@@ -159,7 +159,7 @@ async function detailsRequest(id) {
       release_date: releaseDate,
       runtime: duration,
     } = data;
-
+    let year = releaseDate.slice(0, 4);
     let movie = {
       poster,
       overview,
@@ -169,6 +169,7 @@ async function detailsRequest(id) {
       voteCount,
       releaseDate,
       duration,
+      year,
     };
     let genres = data.genres.map((genre) => genre.name);
     genres = genres.join(", ");
@@ -223,6 +224,12 @@ function showRequestResult(movie) {
           </div>
           <div class="rating">Rating: <span>${movie.vote}</span></div>
           <div class="votes-quantity">Votes: <span>${movie.voteCount}</span></div>
+          <div class="overview">
+            Year:
+            <span
+              >${movie.year}</span
+            >
+          </div>
           <div class="genres">
             Genres: <span>${movie.genres}</span>
           </div>
@@ -237,6 +244,7 @@ function showRequestResult(movie) {
               >${movie.overview}</span
             >
           </div>
+          
         </div>
       </div>
       <div class="trailer">
